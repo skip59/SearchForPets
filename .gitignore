@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/SearchForPets/v17/.suo
+/.vs/SearchForPets/v17/.futdcache.v2
+/.vs/SearchForPets/DesignTimeBuild/.dtbcache.v2
