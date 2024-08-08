@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForPets", "SearchForPets\SearchForPets.csproj", "{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchForPets.Api", "src\SearchForPets.Api\SearchForPets.Api.csproj", "{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6F2549D-579D-414F-814E-17890A709F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForPets.Application", "src\SearchForPets.Application\SearchForPets.Application.csproj", "{F29563E8-4D19-4212-94A6-6A2019D2CE96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForPets.Domain", "src\SearchForPets.Domain\SearchForPets.Domain.csproj", "{6174A76B-5061-4EE1-8D3C-086D431C018D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForPets.Infrastructure", "src\SearchForPets.Infrastructure\SearchForPets.Infrastructure.csproj", "{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,27 @@ Global
 		{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29563E8-4D19-4212-94A6-6A2019D2CE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29563E8-4D19-4212-94A6-6A2019D2CE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29563E8-4D19-4212-94A6-6A2019D2CE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29563E8-4D19-4212-94A6-6A2019D2CE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6174A76B-5061-4EE1-8D3C-086D431C018D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6174A76B-5061-4EE1-8D3C-086D431C018D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6174A76B-5061-4EE1-8D3C-086D431C018D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6174A76B-5061-4EE1-8D3C-086D431C018D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD22944D-9204-40E4-9ED5-D8BF3D4AF88B} = {A6F2549D-579D-414F-814E-17890A709F3D}
+		{F29563E8-4D19-4212-94A6-6A2019D2CE96} = {A6F2549D-579D-414F-814E-17890A709F3D}
+		{6174A76B-5061-4EE1-8D3C-086D431C018D} = {A6F2549D-579D-414F-814E-17890A709F3D}
+		{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9} = {A6F2549D-579D-414F-814E-17890A709F3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA5DBE3F-4523-49F8-ADC0-C71CE581A209}
