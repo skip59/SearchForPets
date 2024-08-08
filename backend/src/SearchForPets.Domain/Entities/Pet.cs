@@ -17,8 +17,22 @@
         public DateOnly BirthDay { get; set; }
         public bool IsVaccinated { get; set; }
         public Guid VolunteerId { get; set; }
-        public string Status { get; set; }
-        public string DetailsForHelp { get; set; }
+        public Status Status { get; set; }
+        public Requisites DetailsForHelp { get; set; }
         public DateTime AtCreated { get; set; }
     }
+
+    public enum Status
+    {
+        NeedHelp,
+        FindHome,
+        FindedHome
+    }
+
+    public class Requisites
+    {
+
+    }
 }
+
+
