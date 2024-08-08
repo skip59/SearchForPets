@@ -1,4 +1,6 @@
-﻿namespace SearchForPets.Domain.Entities
+﻿using SearchForPets.Domain.Entities.Common;
+
+namespace SearchForPets.Domain.Entities
 {
     public class Pet
     {
