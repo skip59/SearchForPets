@@ -21,6 +21,7 @@ namespace SearchForPets.Domain.Entities
         public Guid VolunteerId { get; set; }
         public Status Status { get; set; }
         public List<Requisites> DetailsForHelp { get; set; } = [];
+        public List<PetPhoto> PetPhotos { get; set; } = [];
         public DateTime AtCreated { get; set; }
     }
 }
