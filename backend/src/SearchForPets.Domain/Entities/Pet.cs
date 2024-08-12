@@ -18,8 +18,7 @@ namespace SearchForPets.Domain.Entities
         public bool IsCastrated { get; set; }
         public DateOnly BirthDay { get; set; }
         public bool IsVaccinated { get; set; }
-        public Guid VolunteerId { get; set; }
-        public Status Status { get; set; }
+        public Status? Status { get; set; }
         public List<Requisites> DetailsForHelp { get; set; } = [];
         public List<PetPhoto> PetPhotos { get; set; } = [];
         public DateTime AtCreated { get; set; }

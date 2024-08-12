@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchForPets.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchForPets.Domain", "src\SearchForPets.Domain\SearchForPets.Domain.csproj", "{6174A76B-5061-4EE1-8D3C-086D431C018D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchForPets.Infrastructure", "src\SearchForPets.Infrastructure\SearchForPets.Infrastructure.csproj", "{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchForPets.Infrastructure.Postgres", "src\SearchForPets.Infrastructure\SearchForPets.Infrastructure.Postgres.csproj", "{0870BF0B-8D2D-4B5C-B3B3-9A7AABAAB0A9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F29563E8-4D19-4212-94A6-6A2019D2CE96} = {F29563E8-4D19-4212-94A6-6A2019D2CE96}
 	EndProjectSection
