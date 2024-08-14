@@ -1,10 +1,14 @@
 ﻿using SearchForPets.Domain.Entities.Common;
+using SearchForPets.Domain.Entities.PetContext;
 
-namespace SearchForPets.Domain.Entities
+namespace SearchForPets.Domain.Entities.VolunteerContext
 {
-    public class Volunteer
+    public class Volunteer : Entity<VolunteerId>
     {
-        public Guid Id { get; set; }
+        private Volunteer(VolunteerId id) : base(id)
+        {
+        }
+
         public string FullName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int YearsOfExperience { get; set; }

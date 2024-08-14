@@ -1,10 +1,12 @@
 ﻿using SearchForPets.Domain.Entities.Common;
 
-namespace SearchForPets.Domain.Entities
+namespace SearchForPets.Domain.Entities.PetContext
 {
-    public class Pet
+    public class Pet : Entity<PetId>
     {
-        public Guid Id { get; set; }
+        private Pet(PetId id) : base(id)
+        {
+        }
         public string Name { get; set; } = string.Empty;
         public string AnimalType { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;

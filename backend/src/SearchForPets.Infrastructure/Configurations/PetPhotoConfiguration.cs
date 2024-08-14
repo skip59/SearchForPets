@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SearchForPets.Domain.Entities.Common;
+using SearchForPets.Domain.Entities.PetContext;
 
 namespace SearchForPets.Infrastructure.Postgres.Configurations
 {
