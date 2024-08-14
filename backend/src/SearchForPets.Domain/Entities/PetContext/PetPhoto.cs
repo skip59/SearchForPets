@@ -1,4 +1,4 @@
-﻿namespace SearchForPets.Domain.Entities.Common
+﻿namespace SearchForPets.Domain.Entities.PetContext
 {
     public class PetPhoto
     {
