@@ -1,12 +1,11 @@
 ﻿namespace SearchForPets.Domain.Entities.Common
 {
-    public class RequisiteDetails
+    public record RequisiteDetails
     {
-
-        private readonly List<Requisite> _requisites = [];
-
-        public IReadOnlyList<Requisite> Requisites => _requisites.AsReadOnly();
-
-        public void AddRequisite(Requisite requisites) => _requisites.Add(requisites);
+        public RequisiteDetails(List<Requisite> requisites)
+        {
+            Requisites = requisites;
+        }
+        public IReadOnlyList<Requisite> Requisites { get; }
     }
 }

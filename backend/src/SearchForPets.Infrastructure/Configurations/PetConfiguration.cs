@@ -56,29 +56,46 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
 
             builder.ComplexProperty(p => p.AnthropometricIndicators, pa =>
             {
-                pa.Property(x => x.Weight).IsRequired().HasMaxLength(5);
-                pa.Property(x => x.Growth).IsRequired().HasMaxLength(5);
+                pa.Property(x => x.Weight)
+                .IsRequired()
+                .HasMaxLength(5)
+                .HasColumnName("weight");
+
+                pa.Property(x => x.Growth)
+                .IsRequired()
+                .HasMaxLength(5)
+                .HasColumnName("growth");
             });
 
             builder.ComplexProperty(p => p.Phone, pp =>
             {
-                pp.Property(x => x.Number).IsRequired().HasMaxLength(13);
+                pp.Property(x => x.Number)
+                .IsRequired()
+                .HasMaxLength(13)
+                .HasColumnName("phone");
             });
 
             builder.ComplexProperty(p => p.Address, pa =>
             {
                 pa.Property(x => x.City)
                 .IsRequired()
-                .HasMaxLength(13);
+                .HasMaxLength(13)
+                .HasColumnName("city"); 
+
                 pa.Property(x => x.Street)
                 .IsRequired()
-                .HasMaxLength(25);
+                .HasMaxLength(25)
+                .HasColumnName("street");
+
                 pa.Property(x => x.HouseNumber)
                 .IsRequired()
-                .HasMaxLength(6);
+                .HasMaxLength(6)
+                .HasColumnName("house_number");
+
                 pa.Property(x => x.FlatNumber)
                 .IsRequired()
-                .HasMaxLength(6);
+                .HasMaxLength(6)
+                .HasColumnName("flat_number");
             });
 
             builder.OwnsOne(p => p.DetailsForHelp, pr =>

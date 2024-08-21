@@ -2,8 +2,17 @@
 {
     public record FullName
     {
-        public string Firstname { get; init; } = string.Empty;
-        public string SecondName { get; init; } = string.Empty;
-        public string LastName { get; init; } = string.Empty;
+        private FullName(string firstname, string secondName, string lastName)
+        {
+            Firstname=firstname;
+            SecondName=secondName;
+            LastName=lastName;
+        }
+
+        public string Firstname { get; }
+        public string SecondName { get; }
+        public string LastName { get; }
+
+        public static FullName Create(string firstName, string secondName, string lastName) => new(firstName, secondName, lastName);
     }
 }

@@ -2,8 +2,16 @@
 {
     public record Requisite
     {
-        public string Title { get; init; } = string.Empty;
-        public string Description { get; init; } = string.Empty;
+        private Requisite(string title, string description)
+        {
+            Title=title;
+            Description=description;
+        }
+
+        public string Title { get; }
+        public string Description { get; }
+
+        public static Requisite Create(string title, string description) => new(title, description);
     }
 }
 

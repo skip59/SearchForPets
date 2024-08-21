@@ -23,9 +23,9 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.Volunteer
         private Volunteer(VolunteerId id) : base(id) { }
 
 
-        public FullName FullName { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public int YearsOfExperience { get; set; }
+        public FullName FullName { get; private set; }
+        public string Description { get; private set; } = string.Empty;
+        public int YearsOfExperience { get; private set; }
         public int NumberOfPetAbleHome => _pets.Count(p => p.Status == Status.FindedHome);
         public int NumberOfPetLookingHome => _pets.Count(p => p.Status == Status.FindHome);
         public int NumberOfPetBeingTreated => _pets.Count(p => p.Status == Status.NeedHelp);

@@ -2,12 +2,12 @@
 
 namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
 {
-    public class SocialNetworkDetails
+    public record SocialNetworkDetails
     {
-        private readonly List<SocialNetwork> _socialNetworks = [];
-
-        public IReadOnlyList<SocialNetwork> SocialNetworks => _socialNetworks.AsReadOnly();
-
-        public void AddSocialNetwork(SocialNetwork socialNetwork) => _socialNetworks.Add(socialNetwork);
+        public SocialNetworkDetails(List<SocialNetwork> socialNetworks)
+        {
+            SocialNetworks = socialNetworks;
+        }
+        public IReadOnlyList<SocialNetwork> SocialNetworks { get; }
     }
 }

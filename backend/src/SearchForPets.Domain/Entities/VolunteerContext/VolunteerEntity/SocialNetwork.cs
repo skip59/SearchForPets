@@ -2,7 +2,15 @@
 {
     public record SocialNetwork
     {
-        public string Title { get; set; } = string.Empty;
-        public string Url { get; set; } = string.Empty;
+        private SocialNetwork(string title, string url)
+        {
+            Title = title;
+            Url = url;
+        }
+
+        public string Title { get; }
+        public string Url { get; }
+
+        public static SocialNetwork Create(string title, string url) => new(title, url);
     }
 }

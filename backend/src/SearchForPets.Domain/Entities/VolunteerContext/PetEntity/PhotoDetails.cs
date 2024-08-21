@@ -1,12 +1,11 @@
 ﻿namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
 {
-    public class PhotoDetails
+    public record PhotoDetails
     {
-
-        private readonly List<PetPhoto> _petPhotos = [];
-
-        public IReadOnlyList<PetPhoto> PetPhotos => _petPhotos.AsReadOnly();
-
-        public void AddPetPhoto(PetPhoto petPhoto) => _petPhotos.Add(petPhoto);
+        public PhotoDetails(List<PetPhoto> petPhotos)
+        {
+            PetPhotos = petPhotos;
+        }
+        public IReadOnlyList<PetPhoto> PetPhotos { get; }
     }
 }

@@ -24,20 +24,24 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
             {
                 vn.Property(x => x.Firstname)
                 .IsRequired()
-                .HasMaxLength(20);
+                .HasMaxLength(20)
+                .HasColumnName("first_name");
                 vn.Property(x => x.LastName)
                 .IsRequired()
-                .HasMaxLength(20);
+                .HasMaxLength(20)
+                .HasColumnName("last_name");
                 vn.Property(x => x.SecondName)
                 .IsRequired(false)
-                .HasMaxLength(20);
+                .HasMaxLength(20)
+                .HasColumnName("second_name");
             });
 
             builder.ComplexProperty(v => v.Phone, vp =>
             {
                 vp.Property(x => x.Number)
                 .IsRequired()
-                .HasMaxLength(13);
+                .HasMaxLength(13)
+                .HasColumnName("phone");
             });
 
             builder.OwnsOne(v => v.Requisites, vr =>

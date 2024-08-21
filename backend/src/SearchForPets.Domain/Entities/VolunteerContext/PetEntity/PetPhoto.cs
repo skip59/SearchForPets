@@ -2,7 +2,16 @@
 {
     public record PetPhoto
     {
-        public string Path { get; init; } = string.Empty;
-        public bool IsMain { get; init; }
+        private PetPhoto(string path, bool isMain)
+        {
+            Path = path;
+            IsMain = isMain;
+        }
+
+        public string Path { get; }
+        public bool IsMain { get; }
+
+        public static PetPhoto Create(string path, bool isMain) => new(path, isMain);
+
     }
 }

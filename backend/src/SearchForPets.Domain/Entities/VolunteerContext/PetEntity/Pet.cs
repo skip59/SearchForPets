@@ -36,22 +36,22 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
 
         private Pet(PetId id) : base(id) {}
 
-        public string Name { get; set; } = string.Empty;
-        public string AnimalType { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public string Breed { get; set; } = string.Empty;
-        public string Color { get; set; } = string.Empty;
-        public string HealthAbout { get; set; } = string.Empty;
+        public string Name { get; private set; } = string.Empty;
+        public string AnimalType { get; private set; } = string.Empty;
+        public string Description { get; private set; } = string.Empty;
+        public string Breed { get; private set; } = string.Empty;
+        public string Color { get; private set; } = string.Empty;
+        public string HealthAbout { get; private set; } = string.Empty;
         public Address Address { get; }
         public AnthropometricIndicators AnthropometricIndicators { get; }
         public PhoneNumber Phone { get; }
-        public bool IsCastrated { get; set; }
-        public DateOnly BirthDay { get; set; }
-        public bool IsVaccinated { get; set; }
-        public Status? Status { get; set; }
+        public bool IsCastrated { get; private set; }
+        public DateOnly BirthDay { get; private set; }
+        public bool IsVaccinated { get; private set; }
+        public Status? Status { get; private set; }
         public RequisiteDetails? DetailsForHelp { get; }
         public PhotoDetails? PhotosDetails { get; }
-        public DateTime AtCreated { get; set; }
+        public DateTime AtCreated { get; private set; }
 
 
         //В задании 5.1 будет добавлен класс Result

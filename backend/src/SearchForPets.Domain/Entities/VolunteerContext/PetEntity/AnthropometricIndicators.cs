@@ -11,6 +11,6 @@
         public double Weight { get; }
         public double Growth { get; }
 
-        public static AnthropometricIndicators Set(double weight, double growth) => new(weight, growth);
+        public static AnthropometricIndicators Create(double weight, double growth) => new(weight, growth);
     }
 }
