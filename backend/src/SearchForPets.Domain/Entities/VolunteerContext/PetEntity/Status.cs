@@ -1,4 +1,4 @@
-﻿namespace SearchForPets.Domain.Entities.PetContext
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
 {
     public enum Status
     {

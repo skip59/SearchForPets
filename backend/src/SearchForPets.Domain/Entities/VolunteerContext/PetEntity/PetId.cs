@@ -1,4 +1,4 @@
-﻿namespace SearchForPets.Domain.Entities.PetContext
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
 {
     public record PetId
     {
@@ -11,5 +11,6 @@
 
         public static PetId NewPetId() => new(Guid.NewGuid());
         public static PetId Empty() => new(Guid.Empty);
+        public static PetId Create(Guid id) => new(id);
     }
 }
