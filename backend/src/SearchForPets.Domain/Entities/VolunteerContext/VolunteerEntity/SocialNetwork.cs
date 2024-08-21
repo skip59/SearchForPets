@@ -1,8 +1,7 @@
-﻿namespace SearchForPets.Domain.Entities.VolunteerContext
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.Volunteer
 {
-    public class SocialNetwork
+    public record SocialNetwork
     {
-        public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Url { get; set; } = string.Empty;
     }
