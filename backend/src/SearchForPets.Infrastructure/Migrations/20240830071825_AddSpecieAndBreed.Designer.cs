@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SearchForPets.Infrastructure.Postgres.Context;
@@ -12,9 +13,11 @@ using SearchForPets.Infrastructure.Postgres.Context;
 namespace SearchForPets.Infrastructure.Postgres.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240830071825_AddSpecieAndBreed")]
+    partial class AddSpecieAndBreed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,6 +98,12 @@ namespace SearchForPets.Infrastructure.Postgres.Migrations
                     b.Property<DateOnly>("BirthDay")
                         .HasColumnType("date")
                         .HasColumnName("birth_day");
+
+                    b.Property<string>("Breed")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasColumnName("breed");
 
                     b.Property<string>("Color")
                         .IsRequired()
@@ -177,19 +186,6 @@ namespace SearchForPets.Infrastructure.Postgres.Migrations
                                 .HasMaxLength(5)
                                 .HasColumnType("double precision")
                                 .HasColumnName("weight");
-                        });
-
-                    b.ComplexProperty<Dictionary<string, object>>("PetDetails", "SearchForPets.Domain.Entities.VolunteerContext.PetEntity.Pet.PetDetails#PetDetails", b1 =>
-                        {
-                            b1.IsRequired();
-
-                            b1.Property<Guid>("BreedId")
-                                .HasColumnType("uuid")
-                                .HasColumnName("pet_details_breed_id");
-
-                            b1.Property<Guid>("SpecieId")
-                                .HasColumnType("uuid")
-                                .HasColumnName("pet_details_specie_id");
                         });
 
                     b.ComplexProperty<Dictionary<string, object>>("Phone", "SearchForPets.Domain.Entities.VolunteerContext.PetEntity.Pet.Phone#PhoneNumber", b1 =>
