@@ -80,7 +80,7 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
                 pa.Property(x => x.City)
                 .IsRequired()
                 .HasMaxLength(13)
-                .HasColumnName("city"); 
+                .HasColumnName("city");
 
                 pa.Property(x => x.Street)
                 .IsRequired()
@@ -104,8 +104,9 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
                 pr.OwnsMany(r => r.Requisites, pr =>
                 {
                     pr.Property(x => x.Title)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                        .IsRequired()
+                        .HasMaxLength(50);
+
                     pr.Property(x => x.Description)
                     .IsRequired()
                     .HasMaxLength(500);

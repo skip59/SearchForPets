@@ -2,6 +2,10 @@
 {
     public record PhotoDetails
     {
+        private PhotoDetails()
+        {
+        }
+
         public PhotoDetails(List<PetPhoto> petPhotos)
         {
             PetPhotos = petPhotos;

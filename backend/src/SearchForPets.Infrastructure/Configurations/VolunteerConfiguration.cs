@@ -64,9 +64,10 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
 
                 vb.OwnsMany(vs => vs.SocialNetworks, vsb =>
                 {
-                    vsb.Property(r => r.Title)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                    vsb.Property(t=>t.Title)
+                        .IsRequired()
+                        .HasMaxLength(50);
+
                     vsb.Property(r => r.Url)
                     .IsRequired()
                     .HasMaxLength(500);
