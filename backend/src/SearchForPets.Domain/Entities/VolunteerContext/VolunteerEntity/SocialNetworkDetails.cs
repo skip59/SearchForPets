@@ -11,7 +11,5 @@
             SocialNetworks = socialNetworks;
         }
         public IReadOnlyList<SocialNetwork> SocialNetworks { get; }
-
-        public static SocialNetworkDetails Create(List<SocialNetwork> socialNetworks) => new(socialNetworks);
     }
 }

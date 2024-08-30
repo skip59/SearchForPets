@@ -6,7 +6,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
     {
         private PetDetails() { }
 
-        private PetDetails(SpecieId specieId, Guid breedId)
+        public PetDetails(SpecieId specieId, Guid breedId)
         {
             SpecieId = specieId;
             BreedId = breedId;
@@ -15,8 +15,5 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
         public SpecieId SpecieId { get; } 
         public Guid BreedId { get; }
 
-
-        //В задании 5.1 будет добавлен класс Result
-        public static PetDetails Create (SpecieId specieId, Guid breedId) => new(specieId, breedId);
     }
 }

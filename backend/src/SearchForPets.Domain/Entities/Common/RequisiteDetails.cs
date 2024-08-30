@@ -11,7 +11,5 @@
             Requisites = requisites;
         }
         public IReadOnlyList<Requisite> Requisites { get; }
-
-        public static RequisiteDetails Create(List<Requisite> requisites) => new(requisites);
     }
 }

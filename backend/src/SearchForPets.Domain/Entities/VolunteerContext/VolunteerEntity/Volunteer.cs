@@ -13,8 +13,8 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
             string description, 
             int yearsOfExperience, 
             PhoneNumber phone, 
-            SocialNetworkDetails? socialNetworkDetails,
-            RequisiteDetails? requisiteDetails) : base(id)
+            SocialNetworkDetails socialNetworkDetails,
+            RequisiteDetails requisiteDetails) : base(id)
         {
             FullName=fullName;
             Description=description;
@@ -34,8 +34,8 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
         public int NumberOfPetLookingHome => _pets.Count(p => p.Status == Status.FindHome);
         public int NumberOfPetBeingTreated => _pets.Count(p => p.Status == Status.NeedHelp);
         public PhoneNumber Phone { get; private set; }
-        public SocialNetworkDetails? SocialNetworks { get; private set; }
-        public RequisiteDetails? Requisites { get; private set; }
+        public SocialNetworkDetails SocialNetworks { get; private set; }
+        public RequisiteDetails Requisites { get; private set; }
         public IReadOnlyList<Pet> Pets => _pets;
 
 

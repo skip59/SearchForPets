@@ -20,13 +20,13 @@ namespace SearchForPets.Application.Services.Volunteer.Create
                request.FullName?.LastName);
 
             var socialNetworks = request.SocialNetworkList is not null 
-                ? SocialNetworkDetails.Create(request.SocialNetworkList
+                ? new SocialNetworkDetails(request.SocialNetworkList
                 .Select(x => SocialNetwork.Create(x.Title, x.Url)) 
                 .ToList()) 
                 : null;
 
             var requisitesDetail = request.Requsistes is not null
-                ? RequisiteDetails.Create(request.Requsistes
+                ? new RequisiteDetails(request.Requsistes
                 .Select(x => Requisite.Create(x.Title, x.Description))
                 .ToList()) 
                 : null;
