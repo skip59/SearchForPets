@@ -10,6 +10,6 @@
         {
             SocialNetworks = socialNetworks;
         }
-        public IReadOnlyList<SocialNetwork> SocialNetworks { get; }
+        public IReadOnlyList<SocialNetwork> SocialNetworks { get; } = [];
     }
 }
