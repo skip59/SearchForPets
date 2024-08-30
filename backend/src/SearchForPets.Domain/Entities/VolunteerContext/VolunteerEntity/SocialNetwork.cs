@@ -1,6 +1,4 @@
-﻿using SearchForPets.Domain.Entities.Common;
-
-namespace SearchForPets.Domain.Entities.VolunteerContext.Volunteer
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
 {
     public record SocialNetwork
     {

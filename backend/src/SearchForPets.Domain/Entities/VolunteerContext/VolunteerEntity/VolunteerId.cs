@@ -1,4 +1,4 @@
-﻿namespace SearchForPets.Domain.Entities.VolunteerContext.Volunteer
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
 {
     public record VolunteerId
     {

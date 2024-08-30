@@ -1,6 +1,4 @@
-﻿using SearchForPets.Domain.Entities.VolunteerContext.Volunteer;
-
-namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
+﻿namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
 {
     public record SocialNetworkDetails
     {
@@ -13,5 +11,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
             SocialNetworks = socialNetworks;
         }
         public IReadOnlyList<SocialNetwork> SocialNetworks { get; }
+
+        public static SocialNetworkDetails Create(List<SocialNetwork> socialNetworks) => new(socialNetworks);
     }
 }
