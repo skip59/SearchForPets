@@ -8,7 +8,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
             string name, 
             string animalType, 
             string description, 
-            string breed, 
+            PetDetails petDetails, 
             string color, 
             string healthAbout, 
             Address address, 
@@ -22,7 +22,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
             Name=name;
             AnimalType=animalType;
             Description=description;
-            Breed=breed;
+            PetDetails=petDetails;
             Color=color;
             HealthAbout=healthAbout;
             Address=address;
@@ -37,9 +37,9 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
         private Pet(PetId id) : base(id) {}
 
         public string Name { get; private set; } = string.Empty;
+        public PetDetails PetDetails { get; private set; }
         public string AnimalType { get; private set; } = string.Empty;
         public string Description { get; private set; } = string.Empty;
-        public string Breed { get; private set; } = string.Empty;
         public string Color { get; private set; } = string.Empty;
         public string HealthAbout { get; private set; } = string.Empty;
         public Address Address { get; }
@@ -59,7 +59,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
             string name,
             string animalType,
             string description,
-            string breed,
+            PetDetails petDetails,
             string color,
             string healthAbout,
             Address address,
@@ -72,7 +72,7 @@ namespace SearchForPets.Domain.Entities.VolunteerContext.PetEntity
                 name, 
                 animalType, 
                 description, 
-                breed, 
+                petDetails, 
                 color, 
                 healthAbout, 
                 address, 

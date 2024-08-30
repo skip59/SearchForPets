@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SearchForPets.Domain.Entities.SpeciesContext.SpeciesEntity;
 using SearchForPets.Domain.Entities.VolunteerContext.PetEntity;
 
 namespace SearchForPets.Infrastructure.Postgres.Configurations
@@ -25,10 +26,6 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
             builder.Property(p => p.Description)
                 .HasMaxLength(500);
 
-            builder.Property(p => p.Breed)
-                .IsRequired()
-                .HasMaxLength(50);
-
             builder.Property(p => p.Color)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -53,6 +50,16 @@ namespace SearchForPets.Infrastructure.Postgres.Configurations
             builder.Property(p => p.Status)
                 .IsRequired()
                 .HasConversion<string>();
+
+
+            builder.ComplexProperty(p => p.PetDetails, pdb =>
+            {
+                pdb.Property(x => x.SpecieId)
+                .HasConversion(id => id.Value, value => SpecieId.Create(value))
+                .IsRequired();
+
+                pdb.Property(x => x.BreedId).IsRequired();
+            });
 
             builder.ComplexProperty(p => p.AnthropometricIndicators, pa =>
             {
