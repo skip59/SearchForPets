@@ -1,5 +1,6 @@
 ﻿using SearchForPets.Domain.Entities.Common;
 using SearchForPets.Domain.Entities.VolunteerContext.PetEntity;
+using SearchForPets.Domain.Entities.VolunteerContext.Volunteer;
 
 
 namespace SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity
