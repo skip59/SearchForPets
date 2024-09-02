@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SearchForPets.Domain.Entities.SpeciesContext.SpeciesEntity;
-using SearchForPets.Domain.Entities.VolunteerContext.Volunteer;
+using SearchForPets.Domain.Entities.VolunteerContext.VolunteerEntity;
 
 namespace SearchForPets.Infrastructure.Postgres.Context
 {

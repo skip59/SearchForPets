@@ -10,6 +10,6 @@
         {
             Requisites = requisites;
         }
-        public IReadOnlyList<Requisite> Requisites { get; }
+        public IReadOnlyList<Requisite> Requisites { get; } = [];
     }
 }

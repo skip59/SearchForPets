@@ -2,17 +2,17 @@
 {
     public record FullName
     {
-        private FullName(string firstname, string secondName, string lastName)
+        private FullName(string firstname, string secondName, string? lastName)
         {
             Firstname=firstname;
             SecondName=secondName;
-            LastName=lastName;
+            LastName=lastName ?? "";
         }
 
         public string Firstname { get; }
         public string SecondName { get; }
         public string LastName { get; }
 
-        public static FullName Create(string firstName, string secondName, string lastName) => new(firstName, secondName, lastName);
+        public static FullName Create(string firstName, string secondName, string? lastName) => new(firstName, secondName, lastName);
     }
 }

@@ -1,4 +1,5 @@
 using SearchForPets.Infrastructure.Postgres.Extentions;
+using SearchForPets.Application.Extentions;
 namespace SearchForPets
 {
     public class Program
@@ -9,11 +10,25 @@ namespace SearchForPets
 
             var connectionString = builder.Configuration.GetConnectionString("Database") ?? throw new ApplicationException("Не найден путь к БД");
 
-            builder.Services.InitDbContext(connectionString);
+            builder.Services.AddApplicationContext()
+                            .InitDbContext(connectionString);
+
+            builder.Services.AddControllers();
+
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.MapControllers();
 
             app.Run();
         }
